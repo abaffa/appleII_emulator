@@ -19,10 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\src\6522.cpp" />
-    <ClCompile Include="..\..\..\src\6821.cpp" />
-    <ClCompile Include="..\..\..\src\hw_tty.cpp" />
-    <ClCompile Include="..\..\..\src\hw_web.cpp" />
     <ClCompile Include="..\..\..\src\linkedlist.cpp" />
     <ClCompile Include="..\..\..\src\main.cpp" />
     <ClCompile Include="..\..\..\src\queue_ll.cpp" />
@@ -34,15 +30,11 @@
     <ClCompile Include="..\..\..\src\screen.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\include\6522.h" />
-    <ClInclude Include="..\..\..\include\6821.h" />
     <ClInclude Include="..\..\..\include\byte_utils.h" />
     <ClInclude Include="..\..\..\include\card_prodos.h" />
     <ClInclude Include="..\..\..\include\card_saturn_mem.h" />
+    <ClInclude Include="..\..\..\include\card_videx.h" />
     <ClInclude Include="..\..\..\include\config.h" />
-    <ClInclude Include="..\..\..\include\hw_tty.h" />
-    <ClInclude Include="..\..\..\include\hw_tty_client.h" />
-    <ClInclude Include="..\..\..\include\hw_web.h" />
     <ClInclude Include="..\..\..\include\linkedlist.h" />
     <ClInclude Include="..\..\..\include\queue_ll.h" />
     <ClInclude Include="..\..\..\include\tasm_opcode.h" />
@@ -53,9 +45,6 @@
     <ClInclude Include="..\..\..\include\screen.h" />
   </ItemGroup>
   <ItemGroup>
-    <CopyFileToFolders Include="..\..\..\apple1.rom">
-      <FileType>Document</FileType>
-    </CopyFileToFolders>
     <None Include="packages.config" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -151,7 +140,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\Backup\Develop\emudev\AppleII_emulator\6502_vc\6502_emul\packages\sdl2.2.0.5\build\native\lib\x64\dynamic;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\Backup\Develop\_2023\emudev\appleII_emulator\6502_vc\6502_emul\packages\sdl2.2.0.5\build\native\lib\x64\dynamic;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

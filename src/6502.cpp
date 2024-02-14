@@ -589,7 +589,6 @@ static void php(void)
 static void pla(void)
 {
 	a = pull8();
-
 	zerocalc(a);
 	signcalc(a);
 }
@@ -925,9 +924,16 @@ uint64_t exec6502(uint64_t tickcount)
 	
 	startticks = clockticks6502;
 	while (clockticks6502 < clockgoal6502) {
+
+		if (pc >= 0xC876 && pc <= 0xc898) {
+			//printf("aqui\n");
+			log_6502 = true;
+		}
+
 		opcode = read6502(pc++);
 		status |= FLAG_CONSTANT;
 		if (log_6502) {
+			/*
 			uint8_t c[3];
 			char *dis = "";
 			c[0] = opcode;
@@ -936,7 +942,11 @@ uint64_t exec6502(uint64_t tickcount)
 			//dis = dis6502(pc - 1, c);
 			//fprintf(stderr, "%02X %02X %02X %02X %02X | %04X %s\n", a, x, y, sp, status, pc - 1, dis);
 
-			fprintf(stderr, "%02X %02X %02X %02X\n", pc-1, c[0], c[1], c[2]);
+			fprintf(stderr, "%02X: %02X %02X %02X | a:%02X x:%02X y:%02X sp:%02X st:%02X\n", pc - 1, c[0], c[1], c[2], a, x, y, sp, status);
+			*/
+
+			//fprintf(stderr, "%02X: %02X | a:%02X x:%02X y:%02X sp:%02X st:%02X\n", pc - 1, opcode, a, x, y, sp, status);
+			log_6502 = false;
 		}
 		penaltyop = 0;
 		penaltyaddr = 0;

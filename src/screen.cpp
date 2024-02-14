@@ -3,9 +3,9 @@
 //
 ////// BEGIN LICENSE NOTICE//////
 //
-//6502 Emulator 
+//Apple][+ Emulator 
 //
-//Copyright(C) 2022 Augusto Baffa, (baffa-6502.baffasoft.com.br)
+//Copyright(C) 2023 Augusto Baffa, (baffa-6502.baffasoft.com.br)
 //
 //This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 //

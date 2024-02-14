@@ -3,9 +3,9 @@
 //
 ////// BEGIN LICENSE NOTICE//////
 //
-//6502 Emulator 
+//Apple][+ Emulator 
 //
-//Copyright(C) 2022 Augusto Baffa, (baffa-6502.baffasoft.com.br)
+//Copyright(C) 2023 Augusto Baffa, (baffa-6502.baffasoft.com.br)
 //
 //This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 //
@@ -33,10 +33,18 @@
 
 #define MEMORY_SIZE 0xFFFF //0x100
 
-#define ZX80_WIDTH 280 //40 x 7
-#define ZX80_HEIGHT 192 // 25 x 8
+#define ZX80_WIDTH 320 //40 x 7
+// #define ZX80_WIDTH 280 //40 x 7
+//#define ZX80_WIDTH 560 //80 x 7
+//#define ZX80_HEIGHT 192 // 25 x 8
+#define ZX80_HEIGHT 216 // 25 x 9 (80 cols
+#define ZX80_BORDERX40 20
+#define ZX80_BORDERY40 10
+#define ZX80_BORDER80 0
 #define ZX80_BORDER 0
-#define ZX80_WINDOW_MULTIPLIER 2	
+
+#define ZX80_WINDOW_MULTIPLIER 4	
+#define ZX80_WINDOW_MULTIPLIER80 2	
 
 #define WIDTH 256 //32 x 8
 #define HEIGHT 200 // 25 x 8
